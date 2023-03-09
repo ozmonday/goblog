@@ -2,9 +2,12 @@ name: deploy-to-server
 run-name: deploying to server
 on: [push]
 jobs:
-  check-bats-version:
+  explore-checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with: 
+          fetch-depth: 2
       - run: git log
+      - run: pwd
       - run: ls -al
