@@ -1,0 +1,54 @@
+.fade-in {
+  animation: fade-in 200ms ease-in forwards;
+}
+
+.slide-down {
+  animation: slide-down 160ms ease-in forwards;
+}
+
+.slide-up {
+  animation: slide-up 160ms ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    height: calc(100vh - var(--nav-height));
+   }
+  
+   100% {
+    height: 0vh;
+   }
+}
+
+@keyframes slide-down {
+ 0% {
+  height: 0vh;
+ }
+
+ 100% {
+  height: calc(100vh - var(--nav-height));
+ }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
