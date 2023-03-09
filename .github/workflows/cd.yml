@@ -1,1 +1,4 @@
-
+name: deploy-to-server
+run-name: deploying to server
+on: [push]
+jobs:
