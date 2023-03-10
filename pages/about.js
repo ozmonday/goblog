@@ -9,10 +9,11 @@ export default class Index extends Component {
 
   render() {
     return (
-      <Layout current={0}>
-        <div className="w-full h-screen flex flex-col justify-center px-4 md:px-12">
-          <div className="flex flex-row justify-center">
+      <Layout current={2}>
+        <div className="w-full h-screen flex flex-row justify-center px-4 md:px-12">
+          <div className="flex flex-col justify-center">
             <h2>Iqbal Hadi Purnomo</h2>
+            <h5>Software Engineer</h5>
           </div>
         </div>
         <div className="w-full h-screen flex flex-col justify-center px-4 md:px-12">
