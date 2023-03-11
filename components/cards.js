@@ -1,19 +1,22 @@
 import Image from "next/image";
 import cmt from "@my/public/icons/comment.svg";
 import up from "@my/public/icons/thumb_up.svg";
+import { useRouter } from "next/router";
 
 export function CardPopular({ title, post_at, support, comment }) {
+  const route = useRouter() 
+  const push = () => {
+    route.push("/article/8797567")
+  }
+  
   return (
-    <div className="flex flex-col my-2 py-1 px-2 cursor-pointer hover:bg-gray-100">
-      <h4>{title}</h4>
+    <div onClick={push} className="flex flex-col mb-2 py-1 px-2 cursor-pointer hover:bg-gray-100">
+      <h4 className="mb-1">{title}</h4>
       <div className="flex flex-row">
-        <h6 className="text-xs my-auto text-gray-600 font-semibold border-r pr-2">
-          Post At: {post_at}
-        </h6>
-        <h6 className="text-xs mx-2 my-auto text-gray-600 font-semibold border-r pr-2">
+        <h6 className="text-xs my-auto border-r pr-2">
           Like: {support}
         </h6>
-        <h6 className="text-xs my-auto text-gray-600 font-semibold">
+        <h6 className="text-xs my-auto ml-2">
           Comment: {comment}
         </h6>
       </div>
@@ -22,8 +25,13 @@ export function CardPopular({ title, post_at, support, comment }) {
 }
 
 export function Card({ post_at, support, comment, title, content }) {
+  const route = useRouter() 
+  const push = () => {
+    route.push("/article/8797567")
+  }
+
   return (
-    <div className="flex flex-col justify-between my-2 py-3 px-4 cursor-pointer hover:bg-gray-100 border-b">
+    <div onClick={push} className="flex flex-col justify-between mb-2 py-3 px-4 cursor-pointer hover:bg-gray-100 border-b">
       <div className="flex flex-row">
         <h6 className="text-xs my-auto text-gray-600 font-semibold">
           Post At: {post_at}
@@ -39,13 +47,13 @@ export function Card({ post_at, support, comment, title, content }) {
         </div>
       </div>
       <div className="flex flex-row mt-2">
-        <h6 className="text-xs my-auto md:text-base border-r pr-2 mr-2">
+        <h6 className="text-xs my-auto border-r pr-2 mr-2">
           Like: {support}
         </h6>
-        <h6 className="text-xs my-auto md:text-base border-r pr-2 mr-2">
+        <h6 className="text-xs my-auto border-r pr-2 mr-2">
           Comment: {comment}
         </h6>
-        <h6 className="text-xs my-auto md:text-base">
+        <h6 className="text-xs my-auto">
           Share
         </h6>
       </div>

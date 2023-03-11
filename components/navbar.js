@@ -45,7 +45,7 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div className="fixed flex flex-col w-full top-0">
+      <div className="sticky flex flex-col w-full top-0 z-30">
         <div className="w-full h-1 bg-slate-200">
           <div ref={this.progres} className=" h-1 w-0 bg-green-400" />
         </div>

@@ -90,7 +90,11 @@ button:hover {
   font-family: 'Roboto Mono', monospace;
 }
 
-#articles {
+
+.top {
+  top: var(--nav-height);
+}
+
+#article {
   margin-top: var(--nav-height);
-  height: calc(100vh - var(--nav-height));
 }
