@@ -1,0 +1,44 @@
+.navbar {
+  @apply fixed top-0 z-30;
+  @apply flex flex-col;
+  @apply bg-gray-800; 
+  @apply w-full;
+}
+
+.progres {
+  @apply w-full;
+  height: var(--nav-progres-height);
+  @apply bg-gray-700;
+}
+
+.progres-idicator {
+  @apply w-0;
+  height: var(--nav-progres-height); 
+  @apply bg-green-500;
+}
+
+nav {
+  @apply flex flex-row;
+  @apply w-full;
+  height: var(--nav-height);
+  @apply px-4 py-2 md:px-12 md:py-2;
+  @apply border-b border-gray-500;
+}
+
+.navbar-menu {
+  @apply block ;
+  @apply md:hidden; 
+  @apply p-1; 
+  @apply my-auto; 
+  @apply border border-gray-500 rounded-md;
+}
+
+.menu-container {
+  @apply absolute left-0 md:hidden; 
+  top: calc(var(--nav-height) + var(--nav-progres-height));
+  @apply w-full;
+  height: calc(100vh - (var(--nav-height) + var(--nav-progres-height)));
+  @apply overflow-hidden;
+  @apply bg-gray-800;
+  @apply shadow-xl;
+}

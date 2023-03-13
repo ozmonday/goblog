@@ -1,12 +1,26 @@
 import { Fragment } from "react";
-import Navbar from "./navbar";
+import { Navbar, NavbarCMS } from "./navbar";
 
-export default function Layout({current, children}) {
+export function Layout({ current, children }) {
   return (
     <Fragment>
-      <Navbar current={current}/>
-      <main>{children}</main>
-      <footer className="w-full bg-slate-100 py-1 text-center text-sm"> Made with love by <b>ozmonday</b></footer>
+      <Navbar current={current} />
+      <main className="margin-top">{children}</main>
+      <footer className="w-full bg-gray-800 py-1 text-center text-sm">
+        Made with &#128150; by <b className="text-blue-500 font-bold"> <a href="https://github.com/ozmonday">ozmonday</a></b>
+      </footer>
+    </Fragment>
+  );
+}
+
+export function LayoutCMS({ current, children }) {
+  return (
+    <Fragment>
+      <NavbarCMS current={current} />
+      <main className="margin-top">{children}</main>
+      <footer className="w-full bg-gray-800 py-1 text-center text-sm">
+        Made with &#128150; by <b className="text-blue-500 font-bold"> <a href="https://github.com/ozmonday">ozmonday</a></b>
+      </footer>
     </Fragment>
   );
 }

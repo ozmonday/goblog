@@ -1,0 +1,64 @@
+.card {
+  @apply flex flex-col justify-between;
+  @apply px-4 py-3;
+  @apply border-b border-gray-500;
+  @apply cursor-pointer;
+}
+
+.card:hover {
+  @apply bg-gray-800;
+}
+
+.card-post-at {
+  @apply text-xs text-gray-400 font-semibold;
+}
+
+.card-title {
+  @apply text-lg md:text-xl lg:text-2xl;
+  @apply my-1.5;
+}
+
+.card-content {
+  @apply hidden md:flex;
+}
+
+.card-ilustation {
+  @apply w-20 h-14 lg:w-28 lg:h-28;
+  @apply bg-gray-500;
+  @apply m-2;
+}
+
+.card-viewed {
+  @apply text-xs;
+  @apply border-r border-gray-500;
+  @apply pr-2;
+  @apply mr-2; 
+}
+
+.card-share {
+  @apply text-xs;
+}
+
+
+.card-mini {
+  @apply flex flex-col; 
+  @apply mb-2; 
+  @apply py-1 px-2;
+  @apply cursor-pointer;
+}
+
+.card-mini:hover {
+  @apply bg-gray-800;
+}
+
+.card-mini-post-at {
+  @apply text-xs;
+  @apply my-auto;
+  @apply border-r border-gray-500;
+  @apply  pr-2;
+}
+
+.card-mini-viewed {
+  @apply text-xs; 
+  @apply my-auto ml-2;
+}
